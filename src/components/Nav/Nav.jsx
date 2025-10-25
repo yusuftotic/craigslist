@@ -2,7 +2,7 @@ import React from 'react'
 
 import { NavLink } from 'react-router';
 
-import { TbList, TbCardsFilled, TbPlus } from "react-icons/tb";
+import { TbList, TbCardsFilled, TbPlus, TbHeart, TbChevronDown } from "react-icons/tb";
 
 import './Nav.css'
 
@@ -14,27 +14,31 @@ export default function Nav() {
 
       <div className='Nav__container'>
 
-        <div className='Nav__logo'>Lexibase</div>
+        <div className='Nav__logo'>craigslist</div>
 
-        <ul className='Nav__links'>
+        <div className='Nav__group'>
+          <ul className='Nav__links'>
 
-          <li className='Nav__item'>
-            <NavLink to="/wordlist" className='Nav__link'><TbList className='Nav__icon' />My Word List</NavLink>
-          </li>
+            <li className='Nav__item'>
+              <NavLink to="#" className='Nav__link'><TbHeart className='Nav__icon' />Favorites</NavLink>
+            </li>
 
-          <li className='Nav__item'>
-            <NavLink to="/flashcards" className='Nav__link'><TbCardsFilled className='Nav__icon' />Flashcards</NavLink>
-          </li>
+            <li className='Nav__item'>
+              <NavLink to="#" className='Nav__action'><TbPlus className='Nav__icon' />İlan Ver</NavLink>
+            </li>
 
-          <li className='Nav__item'>
-            <NavLink to="/addword" className='Nav__link'><TbPlus className='Nav__icon' />Add Word</NavLink>
-          </li>
+            <li className='Nav__item'>
+              <p className='Nav__lang'>Türkçe <TbChevronDown className='Nav__icon' /></p>
+            </li>
 
-        </ul>
+          </ul>
 
-        <div className='ProfilePhoto__container'>
-          <img alt='pp' rel='' src='https://images.pexels.com/photos/18398360/pexels-photo-18398360.jpeg' />
+          <div className='ProfilePhoto__container'>
+            <img alt='pp' rel='' src='https://images.pexels.com/photos/18398360/pexels-photo-18398360.jpeg' />
+          </div>
         </div>
+
+
 
       </div>
 

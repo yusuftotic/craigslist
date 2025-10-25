@@ -1,15 +1,12 @@
 .Nav {
   width: 100%;
-  background-color: #fff;
-  
-  box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.25);
 
   margin-bottom: 50px;
 }
 
 .Nav__container {
   max-width: 1200px;
-  height: 64px;
+  height: 80px;
   margin: auto;
 
   display: flex;
@@ -18,46 +15,91 @@
 }
 
 .Nav__logo {
-  color: #1a1a1a;
-  font-size: 32px;
-  font-weight: 700;
+  color: var(--c-primary);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.Nav__group {
+  display: flex;
+  gap: 20px;
 }
 
 .Nav__links {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
-
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-
-   /* 4B5563 */
+  gap: 20px;
 }
 
 .Nav__item {
-  height: 48px;
-
   display: grid;
   place-items: center;
 
   list-style: none;
+  padding: 0 8px;
 }
 
+
 .Nav__link {
+  height: 40px;
+
   display: flex;
   place-items: center;
   gap: 5px;
 
-  color: var(--c-text-primary);
+  color: var(--c-text-secondary);
+  background-color: transparent;
+
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   text-decoration: none;
-}
-.Nav__link:hover {
-  color: var(--c-primary-l);
+  border: none;
+  border-radius: 5px;
+
   cursor: default;
+  padding: 0 8px;
+}
+
+.Nav__link:hover {
+  background-color: #0258620b;
+}
+
+.Nav__action {
+  height: 40px;
+
+  display: flex;
+  place-items: center;
+  gap: 5px;
+
+  color: #FFFFFF;
+  /* background: linear-gradient(135deg, var(--c-primary), var(--c-accent)); */
+  background-color: var(--c-primary);
+
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: .1px;
+
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+
+  cursor: default;
+  padding: 0 16px;
+}
+
+.Nav__action:hover {
+  /* background-color: var(-c); */
+}
+
+.Nav__lang {
+  color: var(--c-text-secondary);
+
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: .1px;
+
+  cursor: pointer;
 }
 
 .Nav__icon {
@@ -67,16 +109,56 @@
 
 
 .ProfilePhoto__container {
-  width: 40px;       /* profil kutusu boyutu */
+  width: 40px;
+  /* profil kutusu boyutu */
   height: 40px;
-  border-radius: 50%; /* yuvarlak yapmak için */
-  overflow: hidden;   /* taşan kısmı kes */
+  border-radius: 50%;
+  /* yuvarlak yapmak için */
+  overflow: hidden;
+  /* taşan kısmı kes */
   cursor: pointer;
 }
 
 .ProfilePhoto__container img {
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* resmi kutuya sığdır, bozulmadan kes */
+  object-fit: cover;
+  /* resmi kutuya sığdır, bozulmadan kes */
   display: block;
+}
+
+.Nav__action {
+  height: 40px;
+  display: flex;
+  place-items: center;
+  gap: 5px;
+  color: #FFFFFF;
+  background: linear-gradient(
+    110deg, 
+    var(--c-accent) 0%, 
+    var(--c-primary) 50%, 
+    var(--c-accent) 100%
+  );
+  background-size: 200% 100%;
+  background-position: 0% 0%;
+
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: .1px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 16px;
+
+  transition: 
+    background-position 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+.Nav__action:hover {
+  background-position: 100% 0%;
+  transform: scale(1.02);
+  box-shadow: 0 0 15px -4px var(--c-accent);
 }

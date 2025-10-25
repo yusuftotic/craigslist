@@ -1,0 +1,43 @@
+.App {
+}
+
+.App__content {
+  width: 60%;
+  margin: auto;
+}
+
+.App__item-container {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.App__slogan {
+  font-size: 48px;
+  margin: 50px 0;
+  margin-bottom: 100px;
+  
+  font-weight: 700; 
+  text-align: center; 
+
+  background: linear-gradient(
+    90deg, 
+    var(--c-primary) 0%, 
+    var(--c-accent) 40%, 
+    var(--c-accent) 60%, 
+    var(--c-primary) 100%
+  );
+  
+  background-clip: text;
+  -webkit-background-clip: text;
+  
+  color: transparent;
+  
+  background-size: 200% auto; 
+  animation: slogan-gradient-flow 8s ease-in-out infinite;
+  
+  text-shadow: 0 2px 15px rgba(2, 89, 98, 0.1); 
+}

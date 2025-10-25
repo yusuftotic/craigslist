@@ -1,5 +1,11 @@
 :root {
-
+  --c-primary: #025962;
+  --c-accent: #3AAB99;
+  --c-text-main: #001719;
+  --c-text-secondary: #64748b;
+  --c-bg-main: #EFFDFE;
+  --c-bg-secondary: #E1E6EA;
+  --c-border: #E1E6EA;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,14 +20,20 @@
   font-family: "Inter", sans-serif;
 }
 
+body {
+  background-color: var(--c-bg-main);
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }

@@ -1,0 +1,49 @@
+.Tabs__container {
+  margin-top: 100px;
+}
+
+.Tabs__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.Tabs__item {
+  width: 100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  color: var(--c-text-secondary);
+  text-decoration: none;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 8px;
+
+  cursor: default;
+}
+.Tabs__item:hover {
+  background-color: #02586211;
+}
+
+.Tabs__item--icon {
+  width: 32px;
+  height: 32px;
+}
+
+.Tabs__item--text {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.checked {
+  color: var(--c-primary);
+  background-color: #02586211;
+}
