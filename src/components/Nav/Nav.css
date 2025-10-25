@@ -1,0 +1,82 @@
+.Nav {
+  width: 100%;
+  background-color: #fff;
+  
+  box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.25);
+
+  margin-bottom: 50px;
+}
+
+.Nav__container {
+  max-width: 1200px;
+  height: 64px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Nav__logo {
+  color: #1a1a1a;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.Nav__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+   /* 4B5563 */
+}
+
+.Nav__item {
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  list-style: none;
+}
+
+.Nav__link {
+  display: flex;
+  place-items: center;
+  gap: 5px;
+
+  color: var(--c-text-primary);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.Nav__link:hover {
+  color: var(--c-primary-l);
+  cursor: default;
+}
+
+.Nav__icon {
+  width: 20px;
+  height: 20px;
+}
+
+
+.ProfilePhoto__container {
+  width: 40px;       /* profil kutusu boyutu */
+  height: 40px;
+  border-radius: 50%; /* yuvarlak yapmak için */
+  overflow: hidden;   /* taşan kısmı kes */
+  cursor: pointer;
+}
+
+.ProfilePhoto__container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* resmi kutuya sığdır, bozulmadan kes */
+  display: block;
+}
